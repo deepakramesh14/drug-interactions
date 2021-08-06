@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <link rel="stylesheet" type="text/css" href="./style1.css">
+        <title>Drug-Interaction-SideEffects</title>
+
+    </head>
+    <body style="text-align: center; background-color: cyan;">
+        <h1  style="font-size: 45px; font-family: 'Times New Roman', Times, serif;" >Drug-Interaction-SideEffects</h1>
+               
+        <br>
+        <br>
+        <br>
+        <br>
+    <div class="form-editing" style="background-color: crimson;" >
+        <form action="/" method="POST" enctype="multipart/form-data">
+            <!-- Drug treating disease -->
+            <label for="task">Please enter the drug name to get the disease it treats:</label>
+            <br>
+            <input type="text" name="drug" id="drug" placeholder="Drug Name">
+            <button type="submit" name="submit" value="getDisease">Get the diseases </button>
+            <br>
+            <br>
+
+
+            <!-- Side Effects of a given drug-->
+            <label for="task">Please enter the drug name to get its side effects:</label>
+            <br>
+            <input type="text" name="sideffects" id="sideffects" placeholder="Drug Name">
+            <button type="submit" name="submit" value="getSideEffects">Get the Side Effects </button>
+            <br>
+            <br>
+
+
+            <!-- Side Effects of list of drugs-->
+            <label for="task">Please enter the list of drug name to get its side effects:</label>
+            <br>
+            <input type="text" name="listsideffects" id="listsideffects" placeholder="Comma-Separated Drug Names">
+            <button type="submit" name="submit" value="getListOfSideEffects">Get the Side Effects  for the List of drugs</button>
+            <br>
+            <br>
+
+
+            <!-- // What are the NEW side effects of adding a new drug to a patient's existing
+                // regimen? First, get the drugs and side effects of patient's regimen:-->
+            
+                <label for="task">Please enter the drug and the list of drug name that are you are already taking:</label>
+                <br>
+                <input type="text" name="listSideEffectGivenDrug1" id="listSideEffectGivenDrug1" placeholder="New Drug">
+                <input type="text" name="listSideEffectGivenDrug2" id="listSideEffectGivenDrug2" placeholder="Comma-Separated Drug Regimen">
+                <button type="submit" name="submit" value="getListOfSideEffectsGivenDrug">Get the Side Effects  for the List of drugs given New Drug</button>
+                <br>
+                <br>
+            
+            <!-- Given side-effect what disease might be causing the drug-->
+
+            <label for="task">Please enter the sideffect to get the drug/drugs which might cause it</label>
+            <br>
+            <input type="text" name="probableSideEffect" id="probableSideEffect" placeholder="Side Effect">
+            <button type="submit" name="submit" value="getTheDrugGivenSideEffect">Get the Drug/Drugs  for the sideeffect </button>
+            <br>
+            <br>
+
+
+            <!-- Given a current drug regime and new disease not being treated find the best drug-->
+            <label for="task">Given a current drug regime and new disease not being treated find the best drug</label>
+            <br>
+            <input type="text" name="dieaseNotTreated" id="dieaseNotTreated" placeholder="New Disease">
+            <input type="text" name="currentDrugRegime" id="currentDrugRegime" placeholder="Comma-Separated Drug Regimen">
+            <button type="submit" name="submit" value="getTheBestDrug">Get the best disease for the sideeffect </button>
+
+
+            
+
+        
+        
+        
+        
+        </form>
+     </div>
+     <br> 
+     <br>
+     <div class="box zone" style="text-align: left;"><img src="{{url_for('static', filename='./img/index.png')}}"></div> 
+     <div class="box zone" style="text-align: center;"><img src="{{url_for('static', filename='./img/download.jpeg')}}"></div> 
+     <div class="box zone" style="text-align: right;"><img src="{{url_for('static', filename='./img/d1.jpeg')}}"></div>
+
+     
+
+
+
+    </body>
+ 
+
+
+
+</html>
